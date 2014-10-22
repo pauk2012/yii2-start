@@ -1,19 +1,18 @@
 {
-	"name": "vova07/yii2-start",
+	"name": "pauk2012/yii2-start",
 	"description": "Yii2-Start it's a small Yii 2 application template for your fast project start.",
 	"keywords": ["yii2", "yii 2", "application", "start", "bootstrap"],
-	"homepage": "http://yii2-start.find-freelancer.pro",
 	"type": "project",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/vova07/yii2-start/issues?q=is%3Aopen",
+        "issues": "https://github.com/pauk2012/yii2-start/issues?q=is%3Aopen",
         "forum": "http://yiiframework.ru/forum/viewtopic.php?f=28&t=16414",
-        "source": "https://github.com/vova07/yii2-start"
+        "source": "https://github.com/pauk2012/yii2-start"
     },
     "authors": [
         {
-            "name": "Vasile Crudu",
-            "email": "bazillio07@yandex.ru"
+            "name": "Paul Khimyack",
+            "email": "pauk.khimyack@gmail.com"
         }
     ],
 	"minimum-stability": "dev",
@@ -21,6 +20,8 @@
 		"php": ">=5.4.0",
 		"yiisoft/yii2": "2.0.*",
 		"yiisoft/yii2-bootstrap": "*",
+
+
         "vova07/yii2-start-base": "*",
         "vova07/yii2-start-themes": "*",
         "vova07/yii2-start-admin-module": "*",
@@ -28,12 +29,282 @@
         "vova07/yii2-start-users-module": "*",
         "vova07/yii2-start-blogs-module": "*",
         "vova07/yii2-start-comments-module": "*",
-        "vova07/yii2-start-rbac-module": "*"
+        "vova07/yii2-start-rbac-module": "*",
+        "pauko/yii2-start-classes": "*"
+        /*
+        "pauk2012/yii2-start-base": "*",
+        "pauk2012/yii2-start-themes": "*",
+        "pauk2012/yii2-start-admin-module": "*",
+        "pauk2012/yii2-start-site-module": "*",
+        "pauk2012/yii2-start-users-module": "*",
+        "pauk2012/yii2-start-blogs-module": "*",
+        "pauk2012/yii2-start-comments-module": "*",
+        "pauk2012/yii2-start-rbac-module": "*"
+        */
     },
     "require-dev": {
     	"yiisoft/yii2-debug": "*",
     	"yiisoft/yii2-gii": "*"
     },
+    "repositories":
+    [
+
+        {
+            "type": "vcs",
+            "url":"http://github.com/pauk2012/yii2-start-base"
+        },
+        {
+            "type": "vcs",
+            "url":"http://github.com/pauk2012/yii2-start-themes"
+        },
+        {
+            "type": "vcs",
+            "url":"http://github.com/pauk2012/yii2-start-admin-module"
+        },
+        {
+            "type": "vcs",
+            "url":"http://github.com/pauk2012/yii2-start-site-module"
+        },
+        {
+            "type": "vcs",
+            "url":"http://github.com/pauk2012/yii2-start-users-module"
+        },
+        {
+            "type": "vcs",
+            "url":"http://github.com/pauk2012/yii2-start-blogs-module"
+        },
+        {
+            "type": "vcs",
+            "url":"http://github.com/pauk2012/yii2-start-comments-module"
+        },
+        {
+            "type": "vcs",
+            "url":"http://github.com/pauk2012/yii2-start-rbac-module"
+        },
+        {
+            "type": "vcs",
+            "url":"http://github.com/pauk2012/yii2-start"
+        },
+
+        {
+            "type":"package",
+            "package":{
+                "name":"pauko/yii2-start-classes",
+                "type": "yii2-extension",
+                "version":"1.0.0",
+                "source":{
+                    "type":"hg",
+                    "url":"ssh://hg@bitbucket.org/pauk/yii2-start-classes",
+                    "reference":"default"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "pauko\\klasses\\": ""
+                    }
+                },
+                "extra": {
+                    "bootstrap": "pauko\\klasses\\Bootstrap"
+                }
+
+            }
+        }
+
+
+/*
+        {
+                "type":"package",
+                "package":{
+                    "name":"pauk2012/yii2-start-base",
+                    "version":"1.0.0",
+                    "source":{
+                        "type":"git",
+                        "url":"http://github.com/pauk2012/yii2-start-base",
+                        "reference":"master"
+                    },
+                    "autoload": {
+                        "psr-4": {
+                            "vova07\\base\\": ""
+                        }
+                    },
+                    "extra": {
+                     "bootstrap": "vova07\\base\\Bootstrap"
+                    }
+
+                }
+        },
+        {
+            "type":"package",
+            "package":{
+                "name":"pauk2012/yii2-start-themes",
+                "version":"1.0.0",
+                "source":{
+                    "type":"git",
+                    "url":"http://github.com/pauk2012/yii2-start-themes",
+                    "reference":"master"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "vova07\\themes\\": ""
+                    }
+                },
+                "extra": {
+                    "bootstrap": "vova07\\themes\\Bootstrap"
+                }
+
+            }
+        },
+        {
+            "type":"package",
+            "package":{
+                "name":"pauk2012/yii2-start-admin-module",
+                "version":"1.0.0",
+                "source":{
+                    "type":"git",
+                    "url":"http://github.com/pauk2012/yii2-start-admin-module",
+                    "reference":"master"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "vova07\\admin\\": ""
+                    }
+                },
+                "extra": {
+                    "bootstrap": "vova07\\admin\\Bootstrap"
+                }
+
+            }
+        },
+        {
+        "type":"package",
+        "package":{
+            "name":"pauk2012/yii2-start-site-module",
+            "version":"1.0.0",
+            "source":{
+                "type":"git",
+                "url":"http://github.com/pauk2012/yii2-start-site-module",
+                "reference":"master"
+            },
+            "autoload": {
+                "psr-4": {
+                    "vova07\\site\\": ""
+                }
+            },
+            "extra": {
+                "bootstrap": "vova07\\site\\Bootstrap"
+            }
+
+        }
+        },
+        {
+            "type":"package",
+            "package":{
+                "name":"pauk2012/yii2-start-users-module",
+                "version":"1.0.0",
+                "source":{
+                    "type":"git",
+                    "url":"http://github.com/pauk2012/yii2-start-users-module",
+                    "reference":"master"
+                },
+                "require": {
+                    "yiisoft/yii2-swiftmailer": "*",
+                    "yiisoft/yii2-bootstrap": "*",
+                    "vova07/yii2-fileapi-widget": "*"
+                },
+
+                "autoload": {
+                    "psr-4": {
+                        "vova07\\users\\": ""
+                    }
+                },
+                "extra": {
+                    "bootstrap": "vova07\\users\\Bootstrap"
+                }
+
+            }
+        },
+        {
+            "type":"package",
+            "package":{
+                "name":"pauk2012/yii2-start-blogs-module",
+                "version":"1.0.0",
+                "require": {
+                    "yiisoft/yii2-jui": "*",
+                    "vova07/yii2-fileapi-widget": "*",
+                    "vova07/yii2-imperavi-widget": "*"
+                },
+
+                "source":{
+                    "type":"git",
+                    "url":"http://github.com/pauk2012/yii2-start-blogs-module",
+                    "reference":"master"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "vova07\\blogs\\": ""
+                    }
+                },
+                "extra": {
+                    "bootstrap": "vova07\\blogs\\Bootstrap"
+                }
+
+            }
+        },
+        {
+            "type":"package",
+            "package":{
+                "name":"pauk2012/yii2-start-comments-module",
+                "version":"1.0.0",
+
+                "source":{
+                    "type":"git",
+                    "url":"http://github.com/pauk2012/yii2-start-comments-module",
+                    "reference":"master"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "vova07\\comments\\": ""
+                    }
+                },
+                "extra": {
+                    "bootstrap": "vova07\\comments\\Bootstrap"
+                }
+
+            }
+        },
+        {
+            "type":"package",
+            "package":{
+                "name":"pauk2012/yii2-start-rbac-module",
+                "version":"1.0.0",
+                "source":{
+                    "type":"git",
+                    "url":"http://github.com/pauk2012/yii2-start-rbac-module",
+                    "reference":"master"
+                },
+                "require": {
+                    "yiisoft/yii2": "*",
+                    "vova07/yii2-select2-widget": "*"
+                },
+
+                "autoload": {
+                    "psr-4": {
+                        "vova07\\rbac\\": ""
+                    }
+                },
+                "extra": {
+                    "bootstrap": "vova07\\rbac\\Bootstrap"
+                }
+
+            }
+        }
+*/
+
+
+
+
+
+    ],
+	
     "config": {
         "process-timeout": 1800
     },

@@ -12,6 +12,13 @@ return [
         'blogs' => [
             'controllerNamespace' => 'vova07\blogs\controllers\frontend'
         ],
+        'klasses' => [
+            'controllerNamespace' => 'pauko\klasses\controllers\frontend'
+        ],
+
+        'gii' => [
+            'class' => 'yii\gii\Module',
+        ],
     ],
     'components' => [
         'request' => [

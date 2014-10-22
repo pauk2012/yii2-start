@@ -23,7 +23,13 @@ return [
         'comments' => [
             'class' => 'vova07\comments\Module',
             'controllerNamespace' => 'vova07\comments\commands'
+        ],
+
+        'klasses' => [
+            'class' => 'pauko\klasses\Module',
+            'controllerNamespace' => 'pauko\klasses\commands'
         ]
+
     ],
     'components' => [
         'log' => [

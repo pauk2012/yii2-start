@@ -12,7 +12,11 @@ return [
         ],
         'comments' => [
             'class' => 'vova07\comments\Module'
+        ],
+        'klasses' => [
+            'class' => 'pauko\klasses\Module'
         ]
+
     ],
     'components' => [
         'user' => [
