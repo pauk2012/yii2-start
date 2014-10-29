@@ -28,7 +28,20 @@ return [
         'klasses' => [
             'class' => 'pauko\klasses\Module',
             'controllerNamespace' => 'pauko\klasses\commands'
+        ],
+        'accounts' => [
+            'class' => 'pauko\accounts\Module',
+            'controllerNamespace' => 'pauko\accounts\commands'
+        ],
+        'trainers' => [
+            'class' => 'pauko\trainers\Module',
+            'controllerNamespace' => 'pauko\trainers\commands'
+        ],
+        'halls' => [
+            'class' => 'pauko\halls\Module',
+            'controllerNamespace' => 'pauko\halls\commands'
         ]
+
 
     ],
     'components' => [

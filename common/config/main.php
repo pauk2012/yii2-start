@@ -15,6 +15,15 @@ return [
         ],
         'klasses' => [
             'class' => 'pauko\klasses\Module'
+        ],
+        'accounts' => [
+            'class' => 'pauko\accounts\Module'
+        ],
+        'trainers' => [
+            'class' => 'pauko\trainers\Module'
+        ],
+        'halls' => [
+            'class' => 'pauko\halls\Module'
         ]
 
     ],
