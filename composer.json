@@ -43,7 +43,8 @@
         "pauk2012/yii2-start-blogs-module": "*",
         "pauk2012/yii2-start-comments-module": "*",
         "pauk2012/yii2-start-rbac-module": "*"
-        */
+        */,
+		"zelenin/yii2-i18n-module": "dev-master"
     },
     "require-dev": {
     	"yiisoft/yii2-debug": "*",

@@ -60,6 +60,10 @@ return [
             'dateFormat' => 'dd.MM.y',
             'datetimeFormat' => 'HH:mm:ss dd.MM.y'
         ],
+        'i18n' => [
+            'class' => Zelenin\yii\modules\I18n\components\I18N::className(),
+            'languages' => ['ru-RU', 'de-DE', 'it-IT']
+        ],
         'db' => require(__DIR__ . '/db.php')
     ],
     'params' => require(__DIR__ . '/params.php')

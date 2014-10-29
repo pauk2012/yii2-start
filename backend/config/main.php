@@ -35,7 +35,10 @@ return [
         'rbac' => [
             'class' => 'vova07\rbac\Module',
             'isBackend' => true
-        ]
+        ],
+        'i18n' => Zelenin\yii\modules\I18n\Module::className()
+
+
     ],
     'components' => [
         'request' => [
