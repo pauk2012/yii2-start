@@ -17,6 +17,18 @@ return [
         'blogs' => [
             'controllerNamespace' => 'vova07\blogs\controllers\backend'
         ],
+        'klasses' => [
+            'controllerNamespace' => 'pauko\klasses\controllers\backend'
+        ],
+        'accounts' => [
+            'controllerNamespace' => 'pauko\accounts\controllers\backend'
+        ],
+        'trainers' => [
+            'controllerNamespace' => 'pauko\trainers\controllers\backend'
+        ],
+        'halls' => [
+            'controllerNamespace' => 'pauko\halls\controllers\backend'
+        ],
         'comments' => [
             'isBackend' => true
         ],
