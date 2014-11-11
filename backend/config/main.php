@@ -4,7 +4,7 @@ Yii::setAlias('backend', dirname(__DIR__));
 
 return [
     'id' => 'app-backend',
-    'name' => 'Yii2-Start',
+    'name' => 'Classes.MD',
     'basePath' => dirname(__DIR__),
     'defaultRoute' => 'admin/default/index',
     'modules' => [

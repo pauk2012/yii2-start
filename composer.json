@@ -44,7 +44,11 @@
         "pauk2012/yii2-start-comments-module": "*",
         "pauk2012/yii2-start-rbac-module": "*"
         */,
-		"zelenin/yii2-i18n-module": "dev-master"
+		"zelenin/yii2-i18n-module": "dev-master",
+		"kartik-v/yii2-widgets": "dev-master",
+		"yii-dream-team/yii2-timezone-picker": "dev-master",
+		"kartik-v/yii2-builder": "dev-master",
+		"base-reality/php-to-javascript": "dev-master"
     },
     "require-dev": {
     	"yiisoft/yii2-debug": "*",
