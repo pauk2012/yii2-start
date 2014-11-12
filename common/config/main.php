@@ -2,7 +2,7 @@
 
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
-    'timeZone' => 'Europe/Moscow',
+    'timeZone' => 'UTC',
     'modules' => [
         'users' => [
             'class' => 'vova07\users\Module'
@@ -57,8 +57,11 @@ return [
             'ruleFile' => '@vova07/rbac/data/rules.php',
         ],
         'formatter' => [
-            'dateFormat' => 'dd.MM.y',
-            'datetimeFormat' => 'HH:mm:ss dd.MM.y'
+            'dateFormat' => 'dd.MM.yyyy',
+            'datetimeFormat' => 'dd.MM.y HH:mm'
+            //'dateFormat' => 'php:d.m.Y',
+            //'datetimeFormat' => 'php:d.m.Y H:i'
+
         ],
         'i18n' => [
             'class' => Zelenin\yii\modules\I18n\components\I18N::className(),
