@@ -5,7 +5,9 @@ return [
     'timeZone' => 'UTC',
     'modules' => [
         'users' => [
-            'class' => 'vova07\users\Module'
+            'class' => 'vova07\users\Module',
+            'robotEmail' => 'no-reply@domain.com',
+            'robotName' => 'Robot'
         ],
         'blogs' => [
             'class' => 'vova07\blogs\Module'
