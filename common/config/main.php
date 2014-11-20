@@ -2,7 +2,8 @@
 
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
-    'timeZone' => 'UTC',
+    'timeZone' => 'Europe/Chisinau',
+    //'timeZone' => 'UTC',
     'modules' => [
         'users' => [
             'class' => 'vova07\users\Module',

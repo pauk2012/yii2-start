@@ -1,0 +1,14 @@
+?Реализовать генерацию RecurenceRule при нажатии на save
+
+?Реализовать javascript при смене аттрибута Rule::endDate , который выдаёт нужный набор атрибутов. Например Rule::endDate == END_AFTER_COUNT
+дает Rule::count
+
+#Проблема с дублирование кнопок SAVE CANCEL из модального окна в основное под формой
+
+
+#Написать событие на onClick для save button
+    изучить как это делается в примерах (
+    Здесь
+    http://localhost/jquery.recurrenceinput.js-master/demo/input.html
+    и здесь
+    http://localhost/recur/

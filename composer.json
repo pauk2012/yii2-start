@@ -15,7 +15,7 @@
             "email": "pauk.khimyack@gmail.com"
         }
     ],
-	"minimum-stability": "stable",
+	"minimum-stability": "dev",
 	"require": {
 		"php": ">=5.4.0",
 		"yiisoft/yii2": "*",
@@ -48,7 +48,8 @@
 		"kartik-v/yii2-widgets": "dev-master",
 		"yii-dream-team/yii2-timezone-picker": "dev-master",
 		"kartik-v/yii2-builder": "dev-master",
-		"base-reality/php-to-javascript": "dev-master"
+		"base-reality/php-to-javascript": "dev-master",
+        "mynameiszanders/when": "dev-master"
     },
     "require-dev": {
     	"yiisoft/yii2-debug": "*",
