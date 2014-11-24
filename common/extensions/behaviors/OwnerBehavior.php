@@ -36,7 +36,10 @@ class OwnerBehavior extends AttributeBehavior
      */
     protected function getValue($event)
     {
-        return \Yii::$app->user->id;
+        if ($this->value){
+            return $this->value;
+        }
+            return \Yii::$app->user->id;
     }
 
     /**

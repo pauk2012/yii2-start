@@ -40,6 +40,10 @@ return [
         'halls' => [
             'class' => 'pauko\halls\Module',
             'controllerNamespace' => 'pauko\halls\commands'
+        ],
+        'taxonomy' => [
+            'class' => 'pauko\taxonomy\Module',
+            'controllerNamespace' => 'pauko\taxonomy\commands'
         ]
 
 

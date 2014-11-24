@@ -33,7 +33,8 @@
         "pauko/yii2-start-classes": "*",
         "pauko/yii2-start-accounts": "*",
         "pauko/yii2-start-trainers": "*",
-        "pauko/yii2-start-halls": "*"
+        "pauko/yii2-start-halls": "*",
+        "pauko/yii2-start-taxonomy": "*"
         /*
         "pauk2012/yii2-start-base": "*",
         "pauk2012/yii2-start-themes": "*",
@@ -50,10 +51,16 @@
 		"kartik-v/yii2-builder": "dev-master",
 		"base-reality/php-to-javascript": "dev-master",
         "mynameiszanders/when": "dev-master"
+
     },
     "require-dev": {
-    	"yiisoft/yii2-debug": "*",
-    	"yiisoft/yii2-gii": "*"
+        "codeception/codeception": "*",
+        "yiisoft/yii2-codeception": "*",
+        "yiisoft/yii2-debug": "*",
+        "yiisoft/yii2-gii": "*",
+        "yiisoft/yii2-faker": "*",
+        "codeception/specify": "*",
+        "codeception/verify": "*"
     },
     "repositories":
     [
@@ -196,7 +203,30 @@
                 }
 
             }
+        },
+        {
+            "type":"package",
+            "package":{
+                "name":"pauko/yii2-start-taxonomy",
+                "type": "yii2-extension",
+                "version":"1.0.0",
+                "source":{
+                    "type":"hg",
+                    "url":"ssh://hg@bitbucket.org/pauk/yii2-start-taxonomy",
+                    "reference":"default"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "pauko\\taxonomy\\": ""
+                    }
+                },
+                "extra": {
+                    "bootstrap": "pauko\\taxonomy\\Bootstrap"
+                }
+
+            }
         }
+
 
 
 

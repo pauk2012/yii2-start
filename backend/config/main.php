@@ -29,6 +29,9 @@ return [
         'halls' => [
             'controllerNamespace' => 'pauko\halls\controllers\backend'
         ],
+        'taxonomy' => [
+            'controllerNamespace' => 'pauko\taxonomy\controllers\backend'
+        ],
         'comments' => [
             'isBackend' => true
         ],

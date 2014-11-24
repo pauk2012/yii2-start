@@ -27,6 +27,9 @@ return [
         ],
         'halls' => [
             'class' => 'pauko\halls\Module'
+        ],
+        'taxonomy' => [
+            'class' => 'pauko\taxonomy\Module'
         ]
 
     ],
