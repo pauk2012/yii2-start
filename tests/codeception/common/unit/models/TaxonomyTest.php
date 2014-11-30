@@ -8,7 +8,7 @@ use Yii;
 use tests\codeception\common\fixtures\UserFixture;
 use tests\codeception\common\unit\DbTestCase;
 use tests\codeception\common\fixtures\TaxonomyFixture;
-use pauko\taxonomy\models\backend\Taxonomy;
+use pauko\taxonomy\models\Taxonomy;
 use vova07\users\models\User;
 use yii\base\Component;
 use yii\base\NotSupportedException;
@@ -45,14 +45,40 @@ class TaxonomyTest extends DbTestCase
         Yii::$app->user->login(User::findIdentity('user1'));
         */
 
-        $user = User::findByUsername('bayer.hudson');
+        $application = $this->mockApplication();
 
-        $newRoot = Taxonomy::createRoot(['name' => 'Гео', 'alias' => 'geo', 'created_by' => $user->id]);
+        $application->runtimePath = '@tests/codeception/common/runtime';
+
+        $user = User::findByUsername('bayer.hudson');
+        $newRoot = new Taxonomy;
+        $newRoot->attributes = ['name' => 'Гео', 'alias' => 'geo', 'created_by' => $user->id];
+        //$newRoot->validate();
+        $this->assertTrue($newRoot->saveNode(false));
+
         $this->assertEquals($newRoot->taxonomy_id, $newRoot->id);
         $this->assertEquals($newRoot->path, $newRoot->id);
-        $this->assertInstanceOf(Taxonomy::className(),Taxonomy::find()->where(['name' => 'Гео'])->one());
-        $geoItem = Taxonomy::createChild(['name' => 'ГЕО 1',  'created_by' => $user->id], $newRoot);
+        $this->assertInstanceOf(Taxonomy::className(),Taxonomy::find()->where(['name' => 'Гео', 'alias' => 'geo'])->one());
+        $geoItem = new Taxonomy;
+        $geoItem->attributes = ['name' => 'ГЕО 1', 'alias' => 'geo1', 'created_by' => $user->id];
+        //$geoItem->validate();
+        $this->assertTrue($geoItem->appendTo($newRoot, false));
+        $this->assertEquals($newRoot->path . '.' . $geoItem->id, $geoItem->path);
         $this->assertEquals($geoItem->taxonomy_id, $newRoot->id);
+        //$geoItem->delete();
+        $foundedGeoItem = Taxonomy::findOne($geoItem->id);
+        $this->assertInstanceOf(Taxonomy::className(),$foundedGeoItem);
+        $this->assertEquals($newRoot->path . '.' . $foundedGeoItem->id, $foundedGeoItem->path);
+
+       // $structure = Taxonomy::getStructure('alias');
+       // \Codeception\Util\Debug::debug($structure);
+        $result = Taxonomy::findByPath($newRoot->path, 'alias');
+        \Codeception\Util\Debug::debug($result);
+
+        $this->assertInstanceOf(Taxonomy::className(),Taxonomy::findByPath('geo', 'alias'));
+        $this->assertEquals($newRoot->id, Taxonomy::findByPath('geo', 'alias')->id);
+        $this->assertInstanceOf(Taxonomy::className(),Taxonomy::findByPath('geo/geo1', 'alias'));
+        $this->assertEquals($geoItem->id, Taxonomy::findByPath('geo/geo1', 'alias')->id);
+        $this->assertEquals($geoItem->id, Taxonomy::findByPath('Гео/Гео 1')->id);
 
     }
     public function _testTaxonomy()
@@ -83,6 +109,7 @@ class TaxonomyTest extends DbTestCase
         $anotherTaxonomy = Taxonomy::createChild(['en' => 'root_taxonomy1'], $root1, true);
         $this->assertNotEquals($root1Taxonomy1->id, $anotherTaxonomy->id);
         //select * from mk3u_taxonomy WHERE path <@ '2' AND path ~ '2.*{1}' AND name::hstore->'en' = 'root1_taxonomy1';
+
 
 
 

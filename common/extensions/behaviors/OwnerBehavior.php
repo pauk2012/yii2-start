@@ -12,7 +12,7 @@ class OwnerBehavior extends AttributeBehavior
      * @var string the attribute that will receive owner_id value
      * Set this property to false if you do not want to record the creation user_id.
      */
-    public $createdByAtAttribute = 'created_by';
+    public $createdByAttribute = 'created_by';
     public $value;
 
 
@@ -25,7 +25,7 @@ class OwnerBehavior extends AttributeBehavior
 
         if (empty($this->attributes)) {
             $this->attributes = [
-                BaseActiveRecord::EVENT_BEFORE_INSERT => [$this->createdByAtAttribute],
+                BaseActiveRecord::EVENT_BEFORE_INSERT => [$this->createdByAttribute],
                 //BaseActiveRecord::EVENT_BEFORE_UPDATE => $this->updatedByAtAttribute,
             ];
         }
@@ -36,10 +36,21 @@ class OwnerBehavior extends AttributeBehavior
      */
     protected function getValue($event)
     {
-        if ($this->value){
-            return $this->value;
+        $isNewOwner = true;
+        $owner = $this->owner;
+        if (!$owner->getIsNewRecord() && !empty($owner->{$this->createdByAttribute})) {
+            $isNewOwner = false;
         }
+        if (is_null(\Yii::$app->user->id)){
+            $isNewOwner = false;
+        }
+        if ($isNewOwner){
             return \Yii::$app->user->id;
+        } else {
+            return $this->owner->{$this->createdByAttribute};
+        }
+
+        //return parent::getValue($event);
     }
 
     /**
