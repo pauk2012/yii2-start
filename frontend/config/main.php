@@ -15,6 +15,9 @@ return [
         'klasses' => [
             'controllerNamespace' => 'pauko\klasses\controllers\frontend'
         ],
+        'klasses' => [
+            'controllerNamespace' => 'pauko\xmppchat\controllers\frontend'
+        ],
 
         'gii' => [
             'class' => 'yii\gii\Module',

@@ -34,7 +34,8 @@
         "pauko/yii2-start-accounts": "*",
         "pauko/yii2-start-trainers": "*",
         "pauko/yii2-start-halls": "*",
-        "pauko/yii2-start-taxonomy": "*"
+        "pauko/yii2-start-taxonomy": "*",
+        "pauko/yii2-start-xmppchatsystem": "*"
         /*
         "pauk2012/yii2-start-base": "*",
         "pauk2012/yii2-start-themes": "*",
@@ -222,6 +223,28 @@
                 },
                 "extra": {
                     "bootstrap": "pauko\\taxonomy\\Bootstrap"
+                }
+
+            }
+        },
+        {
+            "type":"package",
+            "package":{
+                "name":"pauko/yii2-start-xmppchatsystem",
+                "type": "yii2-extension",
+                "version":"1.0.0",
+                "source":{
+                    "type":"hg",
+                    "url":"ssh://hg@bitbucket.org/pauk/yii2-start-xmppchatsystem",
+                    "reference":"default"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "pauko\\xmppchat\\": ""
+                    }
+                },
+                "extra": {
+                    "bootstrap": "pauko\\xmppchat\\Bootstrap"
                 }
 
             }

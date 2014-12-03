@@ -30,7 +30,13 @@ return [
         ],
         'taxonomy' => [
             'class' => 'pauko\taxonomy\Module'
+        ],
+        'xmppchat' => [
+            'class' => 'pauko\xmppchat\Module'
         ]
+
+
+
 
     ],
     'components' => [
