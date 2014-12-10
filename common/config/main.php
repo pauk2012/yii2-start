@@ -31,7 +31,7 @@ return [
         'taxonomy' => [
             'class' => 'pauko\taxonomy\Module'
         ],
-        'xmppchat' => [
+        'im' => [
             'class' => 'pauko\xmppchat\Module'
         ]
 

@@ -15,7 +15,7 @@ return [
         'klasses' => [
             'controllerNamespace' => 'pauko\klasses\controllers\frontend'
         ],
-        'klasses' => [
+        'im' => [
             'controllerNamespace' => 'pauko\xmppchat\controllers\frontend'
         ],
 
