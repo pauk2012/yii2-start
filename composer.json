@@ -110,10 +110,6 @@
             "url":"http://github.com/pauk2012/yii2-widget-datetimepicker"
         },
 
-        {
-            "type": "vcs",
-            "url":"http://github.com/pauk2012/yii2-krajee-base"
-        },
 
 
         {
