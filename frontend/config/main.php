@@ -2,7 +2,6 @@
 
 return [
     'id' => 'app-frontend',
-    'name' => 'Yii2-Start',
     'basePath' => dirname(__DIR__),
     'defaultRoute' => 'site/default/index',
     'modules' => [

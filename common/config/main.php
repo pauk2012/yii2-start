@@ -3,6 +3,8 @@
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'timeZone' => 'Europe/Chisinau',
+    'language' => 'ru-RU',
+
     //'timeZone' => 'UTC',
     'modules' => [
         'users' => [

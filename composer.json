@@ -21,6 +21,7 @@
 		"yiisoft/yii2": "*",
 		"yiisoft/yii2-bootstrap": "*",
 
+        "yiisoft/yii2-authclient": "*",
 
         "vova07/yii2-start-base": "*",
         "vova07/yii2-start-themes": "*",
@@ -34,7 +35,11 @@
         "pauko/yii2-start-accounts": "*",
         "pauko/yii2-start-trainers": "*",
         "pauko/yii2-start-halls": "*",
-        "pauko/yii2-start-taxonomy": "*"
+        "pauko/yii2-start-taxonomy": "*",
+        "pauko/yii2-start-geo": "*",
+        "pauko/yii2-start-social": "*",
+        "getjump/vk": "*",
+        "Stichoza/google-translate-php": "*",
         /*
         "pauk2012/yii2-start-base": "*",
         "pauk2012/yii2-start-themes": "*",
@@ -44,7 +49,7 @@
         "pauk2012/yii2-start-blogs-module": "*",
         "pauk2012/yii2-start-comments-module": "*",
         "pauk2012/yii2-start-rbac-module": "*"
-        */,
+        */
 		"zelenin/yii2-i18n-module": "dev-master",
 		"kartik-v/yii2-widgets": "dev-master",
 		"yii-dream-team/yii2-timezone-picker": "dev-master",
@@ -221,7 +226,52 @@
                 }
 
             }
+        },
+        {
+            "type":"package",
+            "package":{
+                "name":"pauko/yii2-start-geo",
+                "type": "yii2-extension",
+                "version":"1.0.0",
+                "source":{
+                    "type":"hg",
+                    "url":"ssh://hg@bitbucket.org/pauk/yii2-start-geo",
+                    "reference":"default"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "pauko\\geo\\": ""
+                    }
+                },
+                "extra": {
+                    "bootstrap": "pauko\\geo\\Bootstrap"
+                }
+
+            }
+        },
+        {
+            "type":"package",
+            "package":{
+                "name":"pauko/yii2-start-social",
+                "type": "yii2-extension",
+                "version":"1.0.0",
+                "source":{
+                    "type":"hg",
+                    "url":"ssh://hg@bitbucket.org/pauk/yii2-start-social",
+                    "reference":"default"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "pauko\\social\\": ""
+                    }
+                },
+                "extra": {
+                    "bootstrap": "pauko\\geo\\Bootstrap"
+                }
+
+            }
         }
+
 
 
 

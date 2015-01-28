@@ -44,7 +44,12 @@ return [
         'taxonomy' => [
             'class' => 'pauko\taxonomy\Module',
             'controllerNamespace' => 'pauko\taxonomy\commands'
+        ],
+        'geo' => [
+            'class' => 'pauko\geo\Module',
+            'controllerNamespace' => 'pauko\geo\commands'
         ]
+
 
 
     ],

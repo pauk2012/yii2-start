@@ -32,4 +32,4 @@ phpunit.phar
 /phpunit.xml
 
 statics/web
-/mysql_connector*
+/mysql-connector*
