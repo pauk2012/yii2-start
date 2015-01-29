@@ -33,3 +33,7 @@ phpunit.phar
 
 statics/web
 /mysql-connector*
+
+
+
+tests/codeception/common/runtime/
