@@ -59,6 +59,38 @@ class Vcs
                 chdir($path);
                 $output = null;
 
+                $command = $this->gitBin . ' status';
+                echo $path . "\n";
+                echo $command . "\n";
+                passthru($command);
+
+                chdir($returnDir);
+                break;
+            case'hg':
+                $returnDir = getcwd();
+                chdir($path);
+                $command = $this->hgBin . ' status';
+                echo $path . "\n";
+                echo $command . "\n";
+                passthru($command);
+
+                chdir($returnDir);
+                break;
+            default:
+
+        }
+
+    }
+
+    public function vcsCommit($path, $vcs)
+    {
+
+        switch ($vcs){
+            case'git':
+                $returnDir = getcwd();
+                chdir($path);
+                $output = null;
+
                 $command = $this->gitBin . ' commit -a';
                 echo $path . "\n";
                 echo $command . "\n";

@@ -62,47 +62,47 @@
 
         {
             "type": "vcs",
-            "url":"http://github.com/pauk2012/yii2-start-base"
+            "url":"git@github.com:pauk2012/yii2-start-base"
         },
         {
             "type": "vcs",
-            "url":"http://github.com/pauk2012/yii2-start-themes"
+            "url":"git@github.com:pauk2012/yii2-start-themes"
         },
         {
             "type": "vcs",
-            "url":"http://github.com/pauk2012/yii2-start-admin-module"
+            "url":"git@github.com:pauk2012/yii2-start-admin-module"
         },
         {
             "type": "vcs",
-            "url":"http://github.com/pauk2012/yii2-start-site-module"
+            "url":"git@github.com:pauk2012/yii2-start-site-module"
         },
         {
             "type": "vcs",
-            "url":"http://github.com/pauk2012/yii2-start-users-module"
+            "url":"git@github.com:pauk2012/yii2-start-users-module"
         },
         {
             "type": "vcs",
-            "url":"http://github.com/pauk2012/yii2-start-blogs-module"
+            "url":"git@github.com:pauk2012/yii2-start-blogs-module"
         },
         {
             "type": "vcs",
-            "url":"http://github.com/pauk2012/yii2-start-comments-module"
+            "url":"git@github.com:pauk2012/yii2-start-comments-module"
         },
         {
             "type": "vcs",
-            "url":"http://github.com/pauk2012/yii2-start-rbac-module"
+            "url":"git@github.com:pauk2012/yii2-start-rbac-module"
         },
         {
             "type": "vcs",
-            "url":"http://github.com/pauk2012/yii2-start"
+            "url":"git@github.com:pauk2012/yii2-start"
         },
         {
             "type": "vcs",
-            "url":"http://github.com/pauk2012/yii2-widget-datetimepicker"
+            "url":"git@github.com:pauk2012/yii2-widget-datetimepicker"
         },
         {
             "type": "vcs",
-            "url":"http://github.com/pauk2012/yii2-widget-datetimepicker"
+            "url":"git@github.com:pauk2012/when"
         },
 
 
