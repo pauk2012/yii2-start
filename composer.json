@@ -38,6 +38,7 @@
         "pauko/yii2-start-taxonomy": "*",
         "pauko/yii2-start-geo": "*",
         "pauko/yii2-start-social": "*",
+        "pauko/yii2-start-billingual": "*",
         "getjump/vk": "*",
         "Stichoza/google-translate-php": "*",
 		"zelenin/yii2-i18n-module": "dev-master",
@@ -256,7 +257,29 @@
                     }
                 },
                 "extra": {
-                    "bootstrap": "pauko\\geo\\Bootstrap"
+                    "bootstrap": "pauko\\social\\Bootstrap"
+                }
+
+            }
+        },
+        {
+            "type":"package",
+            "package":{
+                "name":"pauko/yii2-start-billingual",
+                "type": "yii2-extension",
+                "version":"1.0.0",
+                "source":{
+                    "type":"hg",
+                    "url":"ssh://hg@bitbucket.org/pauk/yii2-start-billingual",
+                    "reference":"default"
+                },
+                "autoload": {
+                    "psr-4": {
+                        "pauko\\billingual\\": ""
+                    }
+                },
+                "extra": {
+                    "bootstrap": "pauko\\billingual\\Bootstrap"
                 }
 
             }

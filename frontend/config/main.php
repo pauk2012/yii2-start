@@ -14,6 +14,10 @@ return [
         'klasses' => [
             'controllerNamespace' => 'pauko\klasses\controllers\frontend'
         ],
+        'billingual' => [
+            'controllerNamespace' => 'pauko\billingual\controllers\frontend'
+        ],
+
 
         'gii' => [
             'class' => 'yii\gii\Module',

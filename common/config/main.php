@@ -32,7 +32,11 @@ return [
         ],
         'taxonomy' => [
             'class' => 'pauko\taxonomy\Module'
+        ],
+        'billingual' => [
+            'class' => 'pauko\billingual\Module'
         ]
+
 
     ],
     'components' => [

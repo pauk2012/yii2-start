@@ -47,13 +47,14 @@ class ECalendarView extends Widget {
    * @param config .
    */
   public function __construct($config = []) {
-    parent::__construct($config);
-    $this->_dataProvider = new ECalendarViewDataProvider();
+
+    $this->setDataProvider([]);
     $this->_itemView = null;
     $this->_titleView = null;
     $this->_weeksInRow = 1;
     $this->_cssFile = null;
     $this->_ajaxUpdate = true;
+    parent::__construct($config);
     $this->getDataProvider()->getPagination()->setPageIndexVar($this->getId(true) . '_page');
   }
 
@@ -62,6 +63,16 @@ class ECalendarView extends Widget {
    * @param array $config The attributes as key=>value map.
    */
   public function setDataProvider(array $config) {
+
+    if (isset($config['class'])) {
+      $this->_dataProvider = new $config['class'];
+      unset($config['class']);
+    } else {
+      if (!$this->_dataProvider)
+        $this->_dataProvider = new ECalendarViewDataProvider();
+    }
+
+
     foreach($config as $key => $value) {
       $this->getDataProvider()->$key = $value;
     }
@@ -157,7 +168,7 @@ class ECalendarView extends Widget {
 
     // register js
     if($this->getAjaxUpdate()) {
-        $this->registerJs('e-calendar-view', 'jQuery(\'.e-calendar-view\').ecalendarview();');
+        $this->view->registerJs('e-calendar-view', 'jQuery(\'.e-calendar-view\').ecalendarview();');
     }
 
     parent::init();
@@ -171,7 +182,7 @@ class ECalendarView extends Widget {
       'id' => $this->getId(true),
       'data' => $this->getDataProvider()->getData(),
       'pagination' => $this->getDataProvider()->getPagination(),
-      'daysInRow' => $this->resolveDaysInWeek(),
+      'daysInRow' => $this->resolveDaysForPageSizeView(),
       'itemViewFile' => '_view',
       'titleViewFile' => '_title',
       'previousUrl' => $this->getUrl($this->getDataProvider()->getPagination()->getPageIndex() - 1),
@@ -208,7 +219,7 @@ class ECalendarView extends Widget {
     return dirname(__FILE__) . DIRECTORY_SEPARATOR . 'assets/' . $jsFile;
   }
 
-  private function resolveDaysInWeek() {
+  private function resolveDaysForPageSizeView() {
     switch($this->getDataProvider()->getPagination()->getPageSize()) {
       case ECalendarViewPageSize::MONTH:
         return $this->_weeksInRow * 7;

@@ -65,4 +65,9 @@ class ECalendarViewDataProvider extends Component {
     return $data;
   }
 
+  public function getModels()
+  {
+    $this->dataSource->getModels();
+  }
+
 }

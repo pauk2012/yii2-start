@@ -11,15 +11,15 @@
 <thead>
   <tr class="month-year-row">
     <th class="previous">
-      <?php echo CHtml::link('&larr;', $previousUrl, array('class' => 'navigation-link')); ?>
+      <?php echo \yii\helpers\Html::a('&larr;', $previousUrl, array('class' => 'navigation-link')); ?>
     </th>
     <th class="month-year">
-      <?php $this->getOwner()->renderFile($titleViewFile, array(
+      <?php $this->render($titleViewFile, array(
         'pagination' => $pagination,
       )); ?>
     </th>
     <th class="next">
-      <?php echo CHtml::link('&rarr;', $nextUrl, array('class' => 'navigation-link')); ?>
+      <?php echo \yii\helpers\Html::a('&rarr;', $nextUrl, array('class' => 'navigation-link')); ?>
     </th>
   </tr>
   <tr class="weekdays-row">
@@ -51,7 +51,7 @@
       $classesStr = implode(' ', $classes);
     ?>
     <td class="<?php echo $classesStr; ?>" colspan="3">
-      <?php $this->getOwner()->renderFile($itemViewFile, array(
+      <?php $this->render($itemViewFile, array(
         'data' => $data[0],
       )); ?>
     </td>

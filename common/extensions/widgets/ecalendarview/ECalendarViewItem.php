@@ -25,6 +25,11 @@ class ECalendarViewItem extends Component {
   private $_isRelevantDate;
 
   /**
+   * @var array
+   */
+  private $_data;
+
+  /**
    * Constructs the item and sets it's attributes to default values.
    * @param array $config The attributes as key=>value map.
    */
@@ -78,6 +83,16 @@ class ECalendarViewItem extends Component {
    */
   public function getIsRelevantDate() {
     return $this->_isRelevantDate;
+  }
+
+  public function getData()
+  {
+    return $this->_data;
+  }
+
+  public function setData($data)
+  {
+    $this->_data = $data;
   }
 
 }
