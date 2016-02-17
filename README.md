@@ -28,6 +28,12 @@ Installation and getting started:
    - `php yii migrate --migrationPath=@vova07/users/migrations`
    - `php yii migrate --migrationPath=@vova07/blogs/migrations`
    - `php yii migrate --migrationPath=@vova07/comments/migrations`
+   - `php yii migrate --migrationPath=@pauko/accounts/migrations`
+   - `php yii migrate --migrationPath=@pauko/halls/migrations`
+   - `php yii migrate --migrationPath=@pauko/trainers/migrations`
+   - `php yii migrate --migrationPath=@pauko/klasses/migrations`
+   - `php yii migrate --migrationPath=@pauko/social/migrations`
+
    - This will create tables needed for the application to work.
    - You also can use database dump `db.sql` from `my/path/to/yii2-start/common/data`, but however I recommend to use migrations.
 7. Run modules RBAC commands:
@@ -35,6 +41,11 @@ Installation and getting started:
    - `php yii users/rbac/add`
    - `php yii blogs/rbac/add`
    - `php yii comments/rbac/add`
+   - `php yii accounts/rbac/add`
+   - `php yii halls/rbac/add`
+   - `php yii trainers/rbac/add`
+   - `php yii klasses/rbac/add`
+
 8. Set document roots of your Web server:
 
   **For Apache:**

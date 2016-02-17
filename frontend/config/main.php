@@ -24,6 +24,21 @@ return [
         ],
     ],
     'components' => [
+        'authClientCollection' => [
+            'class' => 'yii\authclient\Collection',
+            'clients' => [
+                'google' => [
+                    'class' => 'yii\authclient\clients\GoogleOpenId'
+                ],
+                'facebook' => [
+                    'class' => 'yii\authclient\clients\Facebook',
+                    'clientId' => '233734030293302',
+                    'clientSecret' => '1de5b3cbdf913cec354497fdbcb4b57d',
+                    'attributeNames' => ['email', 'first_name', 'last_name']
+                ],
+                // etc.
+            ],
+        ],
         'request' => [
             'cookieValidationKey' => 'sdi8s#fnj98jwiqiw;qfh!fjgh0d8f',
             'baseUrl' => ''

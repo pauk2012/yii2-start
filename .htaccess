@@ -4,11 +4,12 @@
     Options -Indexes
 </IfModule>
 
+
 # Mod_Rewrite
 <IfModule mod_rewrite.c>
     Options +FollowSymlinks
     # Enable mod_rewrite
-    RewriteEngine On
+   RewriteEngine On
 
     # Backend redirect
     RewriteCond %{REQUEST_URI} ^/backend
