@@ -46,17 +46,17 @@
 		"yii-dream-team/yii2-timezone-picker": "dev-master",
 		"kartik-v/yii2-builder": "dev-master",
 		"base-reality/php-to-javascript": "dev-master",
-        "mynameiszanders/when": "dev-master"
+        "mynameiszanders/when": "dev-master",
+		"delphiki/subrip-file-parser": "1.*",
+		"pauko/php-diff": "*"
 
     },
     "require-dev": {
-        "codeception/codeception": "*",
-        "yiisoft/yii2-codeception": "*",
         "yiisoft/yii2-debug": "*",
         "yiisoft/yii2-gii": "*",
         "yiisoft/yii2-faker": "*",
-        "codeception/specify": "*",
-        "codeception/verify": "*"
+        "yiisoft/yii2-codeception": "^2.0"
+
     },
     "repositories":
     [
@@ -283,6 +283,11 @@
                 }
 
             }
+
+        },
+        {
+            "type": "composer",
+            "url": "http://packages.local"
         }
 
 

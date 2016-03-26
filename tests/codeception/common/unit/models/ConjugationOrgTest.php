@@ -5,6 +5,7 @@
 namespace tests\codeception\common\unit\models;
 
 
+use GuzzleHttp\Client;
 use pauko\Diff\Diff;
 use pauko\Diff\Renderer\Html\ArrayRenderer;
 use pauko\Diff\Renderer\Html\Inline;
@@ -21,7 +22,7 @@ use yii\web\IdentityInterface;
 use Zelenin\yii\SemanticUI\modules\Sidebar;
 
 
-class DiffTest extends TestCase
+class ConjuctionOrgTest extends TestCase
 {
 
     use \Codeception\Specify;
@@ -29,27 +30,16 @@ class DiffTest extends TestCase
 
 
 
-    public function testDiff()
+    public function testParse()
     {
+        $client = new \pauko\billingual\clients\conjuction_org\Client;
+        $response = $client->requestConjuctions('trabahar');
+        \Codeception\Util\Debug::debug($response);
 
-       // $this->assertEquals(Spanish::find('preguntar')['root'], 'pregunt');
-
-        $diff = new Diff(['tomar'], ['tomamos']);
-
-
-
-        \Codeception\Util\Debug::debug($diff->render(new ArrayRenderer()));
 
     }
 
-    public function testSoundEx()
-    {
 
-        \Codeception\Util\Debug::debug(soundex('announce'));
-        \Codeception\Util\Debug::debug(soundex('anunciar'));
-        \Codeception\Util\Debug::debug(soundex('celebrate'));
-        \Codeception\Util\Debug::debug(soundex('celebrar'));
-    }
 
 
 }

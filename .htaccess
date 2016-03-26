@@ -19,6 +19,7 @@
     RewriteCond %{REQUEST_URI} ^/statics
     RewriteRule ^statics/(.*)$ statics/web/$1 [L]
 
+
     # Frontend redirect
     RewriteCond %{REQUEST_URI} ^(.*)$
     RewriteRule ^(.*)$ frontend/web/$1

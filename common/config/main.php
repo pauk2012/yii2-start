@@ -39,7 +39,7 @@ return [
 
 
     ],
-    'components' => [
+     'components' => [
         'user' => [
             'class' => 'yii\web\User',
             'identityClass' => 'vova07\users\models\User',
@@ -75,11 +75,13 @@ return [
             //'datetimeFormat' => 'php:d.m.Y H:i'
 
         ],
-        'i18n' => [
-            'class' => Zelenin\yii\modules\I18n\components\I18N::className(),
-            'languages' => ['ru-RU', 'de-DE', 'it-IT']
-        ],
+        #'i18n' => [
+         #   'class' => Zelenin\yii\modules\I18n\components\I18N::className(),
+         #   'languages' => ['ru-RU', 'de-DE', 'it-IT']
+        #],
         'db' => require(__DIR__ . '/db.php')
     ],
     'params' => require(__DIR__ . '/params.php')
 ];
+
+

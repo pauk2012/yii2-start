@@ -48,7 +48,13 @@ return [
         'geo' => [
             'class' => 'pauko\geo\Module',
             'controllerNamespace' => 'pauko\geo\commands'
+        ],
+        'billingual' => [
+            'class' => 'pauko\billingual\Module',
+            'controllerNamespace' => 'pauko\billingual\commands'
         ]
+
+
 
 
 

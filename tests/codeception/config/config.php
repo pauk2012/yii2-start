@@ -5,7 +5,7 @@
 return [
     'components' => [
         'db' => [
-            'dsn' => 'mysql:host=localhost;dbname=yii2_cms_test',
+            'dsn' => 'mysql:host=localhost;dbname=test_klasses_pro',
         ],
         'mailer' => [
             'useFileTransport' => true,

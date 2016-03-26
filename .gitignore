@@ -37,3 +37,7 @@ statics/web
 
 
 tests/codeception/common/runtime/
+
+
+frontend/web/pi.php
+pi.php
