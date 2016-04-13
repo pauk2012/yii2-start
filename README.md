@@ -33,6 +33,7 @@ Installation and getting started:
    - `php yii migrate --migrationPath=@pauko/trainers/migrations`
    - `php yii migrate --migrationPath=@pauko/klasses/migrations`
    - `php yii migrate --migrationPath=@pauko/social/migrations`
+   - `php yii migrate --migrationPath=@pauko/billingual/migrations`
 
    - This will create tables needed for the application to work.
    - You also can use database dump `db.sql` from `my/path/to/yii2-start/common/data`, but however I recommend to use migrations.

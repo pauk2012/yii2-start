@@ -5,7 +5,7 @@
 return [
     'components' => [
         'db' => [
-            'dsn' => 'mysql:host=localhost;dbname=test_klasses_pro',
+            'dsn' => 'mysql:host=localhost;dbname=klasses_pro_test',
         ],
         'mailer' => [
             'useFileTransport' => true,

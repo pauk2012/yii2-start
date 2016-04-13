@@ -1,7 +1,8 @@
 <?php
 
 return [
-    [
+    'bayer.hudson' => [
+        'id' => '1',
         'username' => 'bayer.hudson',
         'auth_key' => 'HP187Mvq7Mmm3CTU80dLkGmni_FUH_lR',
         //password_0

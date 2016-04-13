@@ -67,7 +67,8 @@ return [
                     'levels' => ['error', 'warning']
                 ]
             ]
-        ]
+        ],
+        'verbosDb' => require(__DIR__ . '/verbosDb.php')
     ],
     'params' => require(__DIR__ . '/params.php')
 ];

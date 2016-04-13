@@ -14,6 +14,7 @@
             "name": "Paul Khimyack",
             "email": "pauk.khimyack@gmail.com"
         }
+
     ],
 	"minimum-stability": "dev",
 	"require": {
@@ -47,8 +48,9 @@
 		"kartik-v/yii2-builder": "dev-master",
 		"base-reality/php-to-javascript": "dev-master",
         "mynameiszanders/when": "dev-master",
-		"delphiki/subrip-file-parser": "1.*",
-		"pauko/php-diff": "*"
+		"delphiki/subrip-file-parser": "*",
+		"pauko/php-diff": "*",
+        "pauko/yii2-masha": "*"
 
     },
     "require-dev": {
@@ -105,6 +107,13 @@
             "type": "vcs",
             "url":"git@github.com:pauk2012/when"
         },
+        {
+            "type": "vcs",
+            "url":"git@github.com:pauk2012/subrip-file-parser"
+        },
+
+
+
 
 
 
